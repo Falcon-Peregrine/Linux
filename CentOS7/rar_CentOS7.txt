@@ -1,0 +1,3 @@
+
+yum -y install glibc.i686
+yum install libstdc++.i686

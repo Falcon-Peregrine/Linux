@@ -1,0 +1,157 @@
+passwd: change user's password
+
+pwd: print current dir
+ls -l: show details
+ls -a: show hidden
+ls -la: both hidden and details
+clear: clear terminal
+cd: just type cd to home directory
+cd: change dir
+cd..: go up once
+cd ../..: go up twice
+cd /: to the ver top
+
+
+----------------------------------------------
+
+mkdir dirname: make dir
+rmdir dirname: remove an empty dir
+
+rm -rf dirname: remove an non-empty dir
+
+
+touch filename: create file
+rm filename: remove file
+cp oldfilename newfilename: copy a file 
+mv oldfilename newfilename: rename a file
+mv file dir: move a file to dir
+cat file: read the file
+grep content file: global regular expression print(search content in file)
+
+name=ryan: store a variable called name as ryan  
+echo hello: print hello
+echo $name: echo out the variable 
+
+cd bin dir
+bash pycharm.sh: to run pycharm on linux
+
+info commandName: print out the help document of a command 
+ctrl+ c: back to home
+
+ls > filename: to copy all the ls result to a file(overwritten)
+ls >> filename: to append all the result to a file (not over written)
+
+-rw: means file
+drw: means dir
+rwx: means read, write, execute
+-rwxrw-r-x: means a file, owner can rwx it, group can read write it, the rest of users can read and execute it
+u - user
+g - group
+o - others
+
+ryan ryan: first is the owner of the file, second is the group it belong to 
+sudo useradd Bucky: to add a new user named Bucky
+sudo passwd Bucky: change passwd for Bucky
+sudo groupadd hacker: add a group called hacker
+sudo usermod -a -G hacker Bucky: append Bucky to hacker group(not removing the group it belongs before)
+sudo usermod -a -g hacker Bucky: append Bucky to hacker group(removing the group it belongs before)
+sudo userdel Bucky: delete Bucky user
+-----------------------------------------------------------------------------------
+
+chmod o+w filename: to change the permission while others can write
+chmod 754 filename:  to change a file to -rwx r-x --r
+    7, 5, 4 represents user, group, others
+    4 - read
+    2 - write
+    1 - execute
+    0 - no permissions
+chmod 777 filename: all permissions to all people
+
+--------------------------------------
+sha1sum file: to get the hash number of the file
+
+------------------------------------------------
+compress and decompress:
+
+gzip Grocery\ List: when there is a space in filename, need to backslash
+gzip filename: to zip a file to filename.gz
+gunzip story: to unzip a file
+
+tar cvf target.tar fileA fileB:
+    make a target.tar to include fileA and fileB
+    cvf - create, visualize, file
+    xvf - extract, visualize, file
+
+--------------------------------------------
+apt: avanced package tool
+sudo: super user do
+
+sudo apt-get update
+sudo apt-get install python3
+
+java -version:  print the version of java
+
+-------------------------------------------
+SSH: Secure Shell
+Set up ssh private and public keys:
+in the local machines:
+    ssh-keygen -t rsa: create a private key, saved in /home/user/.ssh/id_rsa.pub
+    ssh-copy-id root@server's IP: to add copy of private key to the server
+    ssh root@server's IP: to connect to the server, and automatically add
+in the server:
+    nano /etc/ssh/sshd_config
+         find #Authentication:
+                PermitRootLogin without-password
+    reload ssh: to restart the ssh service, when configuration is made
+
+---------------------------------------------
+Transfer files using SFTP
+    sftp root@server's IP
+    cd TargetDir
+    put Desktop/file: put the local file into the server via sftp 
+    put -r Desktop/dir: to put a dir recursively (file in it included) to the working directory
+    get file Desktop/File: get the file from the server to the local machine and rename it as 'File'
+    get -r dir Desktop/Dir: get the dir recursively from the server to the desktop and rename it as 'Dir'
+    exit: to quit from ssh or sftp
+
+
+-------------------------------------------------------
+Partitioning:
+    sudo apt-get install gparted: to install an visualized app for partitioning
+    sudo gparted
+
+-------------------------------------------------------
+Command Shell:
+#!/bin/sh: 
+    adding to the header of a script, and make Linux run the following command
+chmod +rx file: to change the permission of a file to readable and executable
+bash script: to run the script
+
+----------------------------------------------------------
+Processes:
+    ps: to list the processes that we owned and controlled manually
+    ps -ax: list all the processes in the background including the system processes
+        PID            TTY                Time                                                    CMD
+        ProcessID  Terminal         00:00:00(time of cpu comsummed)       Name of command
+
+    without finishing the process, no control of the terminal, eg. xlogo
+    ctrl + c: interrupt the process in the foreground
+    cmd &: to run the cmd in the background
+        [1] 2710: JobNumber,  PID
+    jobs: to list the current jobs(a special type of process)
+    fg %1: to turn the background job to the foreground
+    bg %1: to turn the background job to the foreground
+    ctrl + z: to pause the current foreground job
+    kill PID: to kill the process
+    kill JobNumber: to kill the job
+    kill -STOP cmd: to freeze the process
+    kill -CONT cmd: to unfreeze the process
+
+------------------------------------------------------------
+Crontab:
+
+
+
+
+
+

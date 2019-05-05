@@ -1,0 +1,24 @@
+yum groupinstall "Development Tools"
+
+yum -y install yum-utils yum-builddep python zlib-devel gcc
+
+cd /usr/src
+
+wget https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tgz
+
+tar xzf Python-3.6.5.tgz
+
+cd Python-3.6.5
+
+./configure
+
+make
+
+make install
+
+which python3 && python3 -v
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+	
+python get-pip.py
+
