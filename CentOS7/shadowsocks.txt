@@ -27,3 +27,9 @@ systemctl start shadowsocks
 
 #查看状态命令
 systemctl status shadowsocks
+
+
+
+#挂载网盘可能占用/temp出现systemd等错误
+df -h
+#查看挂载盘符
