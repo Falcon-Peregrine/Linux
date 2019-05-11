@@ -1,3 +1,32 @@
+
+shopt -s extglob
+$ rm -v !("filename")
+	enable the extglob shell option , remove everything except a filename
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 passwd: change user's password
 
 pwd: print current dir

@@ -1,1 +1,6 @@
-rclone copy GoogleDrive:KingCheetah/ycv9iv3w1125500597.05yv83y3.part1.rar /data/GoogleDrive
+rclone copy GoogleDrive:KingCheetah/ycv9iv3w1125500597.05yv83y3.part1.rar /data/av
+
+rclone copy /data/Download/ GoogleDrive:KingCheetah  # 将Download文件夹内的所有文件上传
+
+rm -rf *.aria2 # 将所有aria2文件删除
+

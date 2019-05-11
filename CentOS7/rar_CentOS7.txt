@@ -1,6 +1,7 @@
 
 yum -y install glibc.i686
 yum install libstdc++.i686
+
 wget https://www.rarlab.com/rar/rarlinux-x64-5.5.0.tar.gz
 tar -zxvf rarlinux-x64-5.5.0.tar.gz
 cd rar/
@@ -8,3 +9,6 @@ cp -v rar unrar /usr/local/bin/
 
 
 rar x file
+
+
+unrar x -phttps://www.myhd1080.tv *.part1.rar
