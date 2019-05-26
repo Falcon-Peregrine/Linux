@@ -5,29 +5,25 @@ $ rm -v !("filename")
 
 
 
+cat /etc/os-release
+	查看Linux版本
 
 
 
 
+1、查找文件
 
+find / -name 'filename'    or  find -name 'filename'
 
+2、查找目录
 
+find / -name 'path' -type d
 
+3、查找内容
 
+find . | xargs grep -ri 'content'
+//find . | xargs grep -ril 'content' 只显示文件名称
 
-
-
-
-
-
-
-
-
-
-
-
-
-passwd: change user's password
 
 pwd: print current dir
 ls -l: show details
@@ -42,6 +38,8 @@ cd /: to the ver top
 
 
 ----------------------------------------------
+/soft/shadowsocks/userapiconfig.py
+
 
 mkdir dirname: make dir
 rmdir dirname: remove an empty dir
