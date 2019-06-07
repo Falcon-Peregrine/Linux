@@ -9,6 +9,10 @@ cat /etc/os-release
 	查看Linux版本
 
 
+yum install epel-release
+	CentOS7's depending pip repositories
+yum -y install python-pip
+	install python pip
 
 
 1、查找文件
