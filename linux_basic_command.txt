@@ -15,6 +15,11 @@ yum -y install python-pip
 	install python pip
 
 
+$ jq . config.json
+	检查语法错误
+
+
+
 1、查找文件
 
 find / -name 'filename'    or  find -name 'filename'
