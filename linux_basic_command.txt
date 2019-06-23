@@ -1,3 +1,6 @@
+$ uname -r
+    查看内核版本
+
 
 shopt -s extglob
 $ rm -v !("filename")
