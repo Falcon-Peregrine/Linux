@@ -1,0 +1,2 @@
+lsof -i
+netstat -tlnp
